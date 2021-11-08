@@ -1,0 +1,14 @@
+<html>
+  <body >
+        <h1> {{title}} </h1>
+        {% for value in results %}
+        <table>
+                <tr>
+                        <td>"{{value[0]}}"</td>
+                        <td>"{{value[1]}}"</td>
+                        <td>"{{value[2]}}"</td>
+                </tr>
+        </table>
+        {% endfor %}
+  </body>
+</html>
