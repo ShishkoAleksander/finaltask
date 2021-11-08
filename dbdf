@@ -1,0 +1,11 @@
+[root@db linux]# df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+devtmpfs                     877M     0  877M   0% /dev
+tmpfs                        896M   16K  896M   1% /dev/shm
+tmpfs                        896M  8.8M  887M   1% /run
+tmpfs                        896M     0  896M   0% /sys/fs/cgroup
+/dev/mapper/cl-root           17G  3.0G   15G  18% /
+/dev/sda1                   1014M  256M  759M  26% /boot
+/dev/md0                      30G  247M   30G   1% /local/backups
+/dev/mapper/VGfiles-LVfiles   40G  318M   40G   1% /local/files
+tmpfs                        180M     0  180M   0% /run/user/1000
