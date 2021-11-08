@@ -1,13 +1,16 @@
-# finaltask
-Webserver
+### finaltask
+## Webserver
 
-Check webserver
+# Check webserver
+---
+# Display main page with CRUD requirements
+https://webserver.shishko.info/
 
-Allowed access to static page from db 
-
+___
+# Allowed access to static page from db: 
 curl https://webserver.shishko.info/helloworld
-
-Check join tables
-
+___
+# Check join tables:
 https://webserver.shishko.info/join
+___
 
