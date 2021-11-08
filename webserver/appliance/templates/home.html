@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Literature shop</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+      <h1 align="center">Literature shop</h1>
+      <h2>Magazines</h2>
+      <form action="{{ url_for('magazinesadd')}}" method="post">
+          <h5>Enter the user Details</h5>
+          <div>
+              <input type="text" name="name" placeholder="name">
+          </div>
+              <button >Submit</button>
+          </div>
+      </form>
+    <table class="table">
+    {% for liter in liters %}
+      <tr>
+          <td>
+             {{liter.name}}
+          </td>
+          <td>
+            <form method="POST" action="./update">
+              <input type="hidden" value="{{liter.name}}" name="oldtitle">
+              <input type="text" value="{{liter.name}}" name="newtitle">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{liter.name}}" name="name">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+       </tr>
+    {% endfor %}
+    </table>
+     <h1>Article_type</h1>
+     <form action="{{ url_for('articleadd')}}" method="post">
+          <h5>Enter article type</h5>
+          <div>
+              <input type="text" name="type" placeholder="type">
+          </div>
+              <button >Submit</button>
+          </div>
+      </form>
+    <table class="table">
+    {% for liter1 in liters1 %}
+      <tr>
+          <td>
+             {{liter1.type}}
+          </td>
+       <td>
+            <form method="POST" action="./updatearticle">
+              <input type="hidden" value="{{liter1.type}}" name="oldtitle1">
+              <input type="text" value="{{liter1.type}}" name="newtitle1">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./deletearticle" style="display: inline">
+              <input type="hidden" value="{{liter1.type}}" name="type">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+       </tr>
+    {% endfor %}
+    </table>
+    <h1>Author</h1>
+     <form action="{{ url_for('authoradd')}}" method="post">
+          <h5>Enter author's name</h5>
+          <div>
+              <input type="text" name="author" placeholder="author">
+          </div>
+              <button >Submit</button>
+          </div>
+      </form>
+    <table class="table">
+    {% for liter2 in liters2 %}
+      <tr>
+          <td>
+             {{liter2.author}}
+          </td>
+       <td>
+            <form method="POST" action="./updateauthor">
+              <input type="hidden" value="{{liter2.author}}" name="oldtitle2">
+              <input type="text" value="{{liter2.author}}" name="newtitle2">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./deleteauthor" style="display: inline">
+              <input type="hidden" value="{{liter2.author}}" name="author">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+       </tr>
+    {% endfor %}
+    </table>
+
+  </body>
+</html>
