@@ -1,0 +1,7 @@
+[Unit]
+Description= This is a simple script2
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/script2.sh
+[Install]
+WantedBy=multi-user.target
